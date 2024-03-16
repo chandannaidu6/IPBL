@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Schirmers Test</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+    
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Schirmers Test</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Schirmer test</h5>
+      </div>
+      <div>
+        <input type="text" placeholder="Name" />
+      </div>
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <input placeholder="Age" name="Age" id="age" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <input placeholder="Sex" name="Sex" id="sex" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Wearables" name="Wearables" id="wearables" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Duration" name="Duration" id="duration" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Online Platforms" name="OnlinePlatforms" id="online_platforms" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Nature" name="Nature" id="nature" type="text" class="validate">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="Screen Illumination" name="ScreenIllumination" id="screen_illumination" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Working Years" name="WorkingYears" id="working_years" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Hours Spent Daily (Curricular)" name="HoursSpentDailyCurricular" id="hours_spent_daily_curricular" type="text" class="validate">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="Hours Spent Daily (Non-curricular)" name="HoursSpentDailyNonCurricular" id="hours_spent_daily_non_curricular" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Gadgets Used" name="GadgetsUsed" id="gadgets_used" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Level of Gadget with Respect to Eyes" name="LevelOfGadgetWithRespectToEyes" id="level_of_gadget_with_respect_to_eyes" type="text" class="validate">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="Distance Kept Between Eyes and Gadget" name="DistanceKeptBetweenEyesAndGadget" id="distance_kept_between_eyes_and_gadget" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Avg Nighttime Usage per Day" name="AvgNighttimeUsagePerDay" id="avg_nighttime_usage_per_day" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Blinking During Screen Usage" name="BlinkingDuringScreenUsage" id="blinking_during_screen_usage" type="text" class="validate">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="Difficulty in Focusing After Using Screens" name="DifficultyInFocusingAfterUsingScreens" id="difficulty_in_focusing_after_using_screens" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Frequency of Complaints" name="FrequencyOfComplaints" id="frequency_of_complaints" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Severity of Complaints" name="SeverityOfComplaints" id="severity_of_complaints" type="text" class="validate">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="RVIS" name="RVIS" id="rvis" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Ocular Symptoms Observed Lately" name="OcularSymptomsObservedLately" id="ocular_symptoms_observed_lately" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Symptoms Observing at Least Half of the Times" name="SymptomsObservingAtLeastHalfOfTheTimes" id="symptoms_observing_at_least_half_of_the_times" type="text" class="validate">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="Complaints Frequency" name="ComplaintsFrequency" id="complaints_frequency" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Frequency of Dry Eyes" name="FrequencyOfDryEyes" id="frequency_of_dry_eyes" type="text" class="validate">
+            </div>
+        </div>
+ 
+            <!-- Add similar input fields for other columns -->
+          </div>
+          <div class="row center">
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+          </div>
+        </form>
+      </div>
+
+      <br><br>
+      <div class="row">
+        <div class="col s12 center">
+          {{pred}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full-time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script
